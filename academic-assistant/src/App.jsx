@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { SessionProvider } from "./contexts/SessionContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -8,7 +8,7 @@ import SignUpPage from "./pages/SignUpPage";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <SessionProvider>
           <Routes>
@@ -33,6 +33,6 @@ export default function App() {
           </Routes>
         </SessionProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
